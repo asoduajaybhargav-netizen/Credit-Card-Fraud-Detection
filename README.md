@@ -7,8 +7,8 @@ A machine learning project that detects fraudulent credit card transactions from
 In real-world transaction data, fraud is a tiny minority class. In this dataset, only **46 out of 28,481 transactions (0.16%)** are fraudulent. A model that simply predicts "not fraud" every time would already be 99.8% "accurate" while being completely useless — so the project explicitly works around this imbalance rather than optimizing for accuracy alone.
 
 <p align="center">
-  <img src="images/class_distribution_bar.png" width="420"/>
-  <img src="images/class_distribution_pie.png" width="420"/>
+  <img src="https://raw.githubusercontent.com/NaveenK9959/Credit-card-Fraud-Detection/main/class_distribution_bar.png" width="420"/>
+  <img src="https://raw.githubusercontent.com/NaveenK9959/Credit-card-Fraud-Detection/main/class_distribution_pie.png" width="420"/>
 </p>
 
 ## Dataset
@@ -29,11 +29,11 @@ In real-world transaction data, fraud is a tiny minority class. In this dataset,
 
 ## Exploratory Data Analysis
 
-Fraudulent and legitimate transactions differ noticeably in amount and timing. Fraud amounts skew toward smaller, more tightly clustered values, and fraud shows a different density pattern across the transaction time window than legitimate activity — signal the model picks up on alongside the anonymized `V1`–`V28` features.
+Transaction amounts are heavily right-skewed (shown here on a log scale), and fraud follows a different density pattern across the transaction time window than legitimate activity — signal the model picks up on alongside the anonymized `V1`–`V28` features.
 
 <p align="center">
-  <img src="images/amount_by_class_boxplot.png" width="420"/>
-  <img src="images/time_density_by_class.png" width="420"/>
+  <img src="https://raw.githubusercontent.com/NaveenK9959/Credit-card-Fraud-Detection/main/amount_distribution_log.png" width="420"/>
+  <img src="https://raw.githubusercontent.com/NaveenK9959/Credit-card-Fraud-Detection/main/time_density_by_class.png" width="420"/>
 </p>
 
 ## Results
@@ -48,8 +48,8 @@ Fraudulent and legitimate transactions differ noticeably in amount and timing. F
 The model was tuned to prioritize **recall on the fraud class**: it catches every actual fraud case in the test set (9/9), at the cost of also flagging a number of legitimate transactions as suspicious (89 false positives out of 5,688 legit transactions). This is a deliberate, realistic trade-off for fraud detection — missing a real fraud is typically far more costly than a false alarm that gets reviewed and cleared. The near-perfect ROC-AUC score shows the model separates the two classes very well overall, independent of the specific decision threshold used.
 
 <p align="center">
-  <img src="images/confusion_matrix.png" width="380"/>
-  <img src="images/roc_curve.png" width="420"/>
+  <img src="https://raw.githubusercontent.com/NaveenK9959/Credit-card-Fraud-Detection/main/confusion_matrix.png" width="380"/>
+  <img src="https://raw.githubusercontent.com/NaveenK9959/Credit-card-Fraud-Detection/main/roc_curve.png" width="420"/>
 </p>
 
 ## Tech Stack

@@ -1,1 +1,1 @@
-# Credit-Card-Fraud-Detection
+This project focuses on building a machine learning model to detect fraudulent credit card transactions. Due to the highly imbalanced nature of fraud data (fraud cases are rare compared to normal transactions), this problem involves not only classification but also techniques to handle imbalance and improve model precision and recall.

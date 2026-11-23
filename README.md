@@ -93,8 +93,3 @@ The model was tuned to prioritize **recall on the fraud class**: it catches ever
 - Precision-recall curve and threshold tuning, since ROC-AUC can look overly optimistic on highly imbalanced data
 - Cost-sensitive evaluation that weighs false negatives vs. false positives explicitly
 
-## Author
-
-**Naveen Kumar**
-- GitHub: [@NaveenK9959](https://github.com/NaveenK9959)
-- LinkedIn: [naveen-kumar-934858289](https://linkedin.com/in/naveen-kumar-934858289)
